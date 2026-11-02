@@ -1,0 +1,36 @@
+.horz-lines-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 5px solid red; */
+    height: 100%;
+    gap: 5px;
+}
+
+.horz-line {
+    width: 100%;
+    flex-grow: 1;
+    transform-origin: left;
+    box-shadow: 2.5px 5px 5px rgba(15, 15, 15, .45) inset;
+    transform: scaleX(0);
+
+}
+
+.animate-horz-line {
+    animation: intro-animate-horz-line 2.5s var(--delay) forwards;
+}
+
+@keyframes intro-animate-horz-line {
+    25% {
+        transform: scaleX(1);
+    }
+
+    80% {
+        transform: scaleX(1)translateX(0)
+    }
+
+    100% {
+        transform: scaleX(1)translateX(100%)
+    }
+}

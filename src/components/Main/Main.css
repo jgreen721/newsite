@@ -1,0 +1,23 @@
+.main-container {
+    position: relative;
+}
+
+
+
+.main-container-animate-intro {
+    animation: animate-intro-main-container 1s 1s forwards;
+}
+
+@keyframes animate-intro-main-container {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.main-container-content {
+    position: relative;
+    background: rgb(10, 10, 10);
+
+}

@@ -1,0 +1,285 @@
+.mansion-container {
+    height: 60vmin;
+    width: 55vmin;
+    position: absolute;
+    bottom: -8.5vmin;
+    left: 15%;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    /* transform: rotateY(45deg) */
+    /* border: 2px solid blue; */
+}
+
+.mansion-side {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    /* border: 2px solid red; */
+}
+
+
+.left-mansion-side-roof,
+.right-mansion-side-roof,
+.mansion-front-roof {
+    height: 30%;
+    width: 100%;
+    background: rgb(45, 45, 55);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.left-mansion-side-roof {
+    transform-origin: bottom;
+    transform: rotateX(30deg);
+}
+
+.right-mansion-side-roof {
+    transform-origin: bottom;
+    transform: rotateX(25deg);
+}
+
+.mansion-front-roof {
+    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+    transform-origin: bottom;
+    transform: rotateX(33.5deg);
+}
+
+.left-mansion-side-roof::after,
+.right-mansion-side-roof::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(black, transparent);
+}
+
+.roof-shadow,
+.front-house-shadow {
+    position: absolute;
+    inset: 0;
+    opacity: 25%;
+    background: linear-gradient(to right, rgb(149, 127, 6), transparent);
+}
+
+
+.left-mansion-side-house,
+.right-mansion-side-house {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    gap: 20px;
+    background-image: linear-gradient(rgb(153, 94, 16) 5px, rgb(75, 49, 12) 10px);
+    background-size: 100% 10px;
+    position: relative;
+    display: none;
+    /* border: 2px solid orange; */
+}
+
+.left-house-shadow,
+.right-house-shadow {
+    position: absolute;
+    inset: 0;
+}
+
+.left-mansion-side {
+    transform: translateX(-100%)rotateY(-90deg);
+    transform-origin: right;
+}
+
+.right-mansion-side {
+    transform: translateX(100%)rotateY(90deg);
+    transform-origin: left;
+}
+
+.left-side-window {
+    height: 12vmin;
+    width: 10vmin;
+    border: 5px solid rgb(38, 31, 25);
+    border-radius: 25% 25% 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(245, 235, 188), rgb(206, 197, 155));
+    box-shadow: 5px 5px 10px rgba(20, 20, 20, .5), 0px 2px 5px rgba(100, 100, 50, 1);
+}
+
+.center-window-pane {
+    width: 100%;
+    height: 7.5px;
+    background: rgb(38, 31, 25);
+}
+
+
+.mansion-front-house {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    gap: 20px;
+    background-image: linear-gradient(rgb(153, 94, 16) 5px, rgb(75, 49, 12) 10px);
+    background-size: 100% 10px;
+    position: relative;
+    perspective: 500px;
+
+}
+
+.mansion-front-house::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 25%;
+    background: linear-gradient(darkred, black);
+}
+
+.windows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 25px;
+}
+
+.nose-section {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+    height: 65vmin;
+    width: 20vmin;
+    bottom: 0;
+    /* transform-style: preserve-3d; */
+    /* transform: translateZ(45px)rotateY(25deg) */
+    /* top: -50%; */
+}
+
+.nose-side-left {
+    transform-origin: right;
+    /* transform: translateX(-100%)rotateY(90deg); */
+}
+
+.nose-side-left .nose-roof {
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    /* transform: rotateX(65deg); */
+}
+
+
+.nose-side-right {
+    /* transform-origin: left;
+    transform: translateX(100%)rotateY(90deg); */
+}
+
+.nose-side {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nose-roof {
+    height: 30%;
+    width: 100%;
+    background: rgb(20, 20, 20);
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.tan-trim {
+    width: 100%;
+    background: tan;
+    height: 5%;
+}
+
+.nose-small-roof {
+    width: 100%;
+    height: 12%;
+    background: rgb(35, 35, 35);
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.nose-house {
+    background-image: linear-gradient(rgb(153, 94, 16) 5px, rgb(75, 49, 12) 10px);
+    background-size: 100% 10px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+
+.nose-side-front {
+    width: 100%;
+    height: 100%;
+
+    /* border: 2px solid red; */
+    /* transform: translateZ(100px); */
+}
+
+.front-side-roof-container {
+    width: 100%;
+    height: 37.5%;
+    /* border: 2px solid yellow; */
+    position: relative;
+}
+
+.front-side-roof,
+.front-side-roof-trim {
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background: rgb(30, 30, 30);
+}
+
+.front-side-roof {
+    transform: scale(.9);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-side-roof-top {
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    z-index: 10;
+    background: rgb(129, 110, 85);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+}
+
+.front-side-roof-trim {
+    background: tan;
+
+}
+
+.center-window {
+    position: absolute;
+    width: 65px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 7.5px solid tan;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(20, 20, 20), rgb(150, 150, 150))
+}
+
+.vert-frame {
+    height: 100%;
+    width: 5px;
+    background: white;
+    position: absolute;
+}
+
+.horz-frame {
+    width: 100%;
+    height: 5px;
+    background: white;
+    position: absolute;
+}

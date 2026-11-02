@@ -1,0 +1,63 @@
+.lightning-scene-container {
+    position: absolute;
+    inset: 0;
+    /* border: 3px solid orange; */
+}
+
+
+.black-sky {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgb(5, 5, 5), rgb(10, 10, 10));
+}
+
+
+.lightning-flash {
+    position: absolute;
+    inset: 0;
+    background: white;
+    animation: lightning-flash 20s infinite;
+}
+
+@keyframes lightning-flash {
+
+    0%,
+    8%,
+    20%,
+    22%,
+    40%,
+    42%,
+    54%,
+    56%,
+    76%,
+    78%,
+    82%,
+    85%,
+    100% {
+        opacity: 0;
+    }
+
+    21%,
+    41%,
+    55%,
+    77%,
+    83% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: .5
+    }
+
+    11% {
+        opacity: .25
+    }
+
+    15% {
+        opacity: .75
+    }
+
+    16% {
+        opacity: 0
+    }
+}

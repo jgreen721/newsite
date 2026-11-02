@@ -1,0 +1,1 @@
+export { default as BatesMotel } from "./BatesMotel/BatesMotel"

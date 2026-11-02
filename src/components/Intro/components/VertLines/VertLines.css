@@ -1,0 +1,46 @@
+.vert-lines-container {
+    position: absolute;
+    inset: 0;
+}
+
+
+.vert-lines-row {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.vert-line {
+    height: 100%;
+    flex: 1;
+    box-shadow: -6.5px -5px 15px rgba(15, 15, 15, .65) inset;
+    transform: scaleY(0);
+}
+
+.top-vert-lines-row .vert-line {
+    transform-origin: top;
+}
+
+.bottom-vert-lines-row .vert-line {
+    transform-origin: bottom;
+}
+
+.animate-vert-line {
+    animation: animate-vert-lines 1s var(--delay) forwards, animate-exit-vert-lines 1.25s 3s forwards;
+}
+
+@keyframes animate-vert-lines {
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+@keyframes animate-exit-vert-lines {
+    100% {
+        transform: scaleY(0);
+    }
+}

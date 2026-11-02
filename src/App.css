@@ -1,0 +1,7 @@
+.app {
+    position: relative;
+    color: white;
+    background: black;
+    max-width: 85rem;
+    margin: 0 auto;
+}
